@@ -1,30 +1,35 @@
-// pages/user/user.js
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    detail: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.getUserInfo({
-    //   success: (res) => {
-    //     console.log(res);
-    //     this.setData({
-    //       userInfo: res.userInfo
-    //     })
-    //   }
-    // })
+    this.loadDetail(options.id);
   },
-  getUser(e) {
-    console.log(e);
-    this.setData({
-      userInfo: e.detail.userInfo
+  loadDetail(id){
+    wx.showLoading({
+      title: '加载详情...',
+    })
+    wx.request({
+      url: `https://www.koocv.com/h5-view/v/movie/detail/?id=${id}`,
+      success: (res) => {
+        console.log(res);
+        wx.setNavigationBarTitle({
+          title: res.data.title,
+        })
+        this.setData({
+          detail: res.data
+        })
+        wx.hideLoading();
+      }
     })
   },
   /**

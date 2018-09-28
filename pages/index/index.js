@@ -5,17 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[{
-        src: "http://image.wawscm.com/product/489232210428170240-400x400.jpg",
-        title: "aaaaaa"
-      },{
-        src: "http://image.wawscm.com/product/554806216363085824-400x400.jpg",
-        title: "bbbbbb"
-      },{
-        src: "http://image.wawscm.com/product/554811498350776320-400x400.jpg",
-        title: "cccccc"
-      }
-    ],
+    list:[],
     start: 10,
     loading: false
   },
@@ -54,6 +44,11 @@ Page({
     if (!this.data.loading) {
       this.loadData();
     }
+  },
+  tap(e){
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + e.currentTarget.dataset.id,
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
