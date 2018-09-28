@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/subject/subject"
+  ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/assets/image/home0.png",
+      "selectedIconPath": "/assets/image/home1.png"
+    },{
+      "pagePath": "pages/user/user",
+      "text": "用户",
+      "iconPath": "/assets/image/user0.png",
+      "selectedIconPath": "/assets/image/user1.png"
+    },{
+      "pagePath": "pages/subject/subject",
+      "text": "分类",
+      "iconPath": "/assets/image/subject0.png",
+      "selectedIconPath": "/assets/image/subject1.png"
+    }]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "meng",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  }
+}
