@@ -1,3 +1,9 @@
 <!--pages/user/user.wxml-->
 <image src='{{userInfo.avatarUrl}}'></image>
+<text wx:if='{{userName}}'>{{userName}}</text>
 <button open-type='getUserInfo' bindgetuserinfo='getUser'>获取用户信息</button>
+<button bindtap='set'>设置</button>
+<button bindtap='get'>获取</button>
+
+<import src='/common/template/list.wxml'/>
+<template is='list-template' data='{{list, loading}}'></template>

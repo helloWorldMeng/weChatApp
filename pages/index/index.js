@@ -40,12 +40,22 @@ Page({
     })
   },
   lower() {
-    console.log(111);
     if (!this.data.loading) {
       this.loadData();
     }
   },
   tap(e){
+    wx.getStorage({
+      key: 'history',
+      success: function(res) {
+        let dataList = res.data;
+        dataList.push(e.currentTarget.dataset.detail);
+        wx.setStorage({
+          key: 'history',
+          data: dataList,
+        })
+      },
+    })
     wx.navigateTo({
       url: '/pages/detail/detail?id=' + e.currentTarget.dataset.id,
     })
