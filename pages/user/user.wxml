@@ -1,3 +1,10 @@
 <!--pages/user/user.wxml-->
+<import src="../template/list/list" />
 <image src='{{userInfo.avatarUrl}}'></image>
 <button open-type='getUserInfo' bindgetuserinfo='getUser'>获取用户信息1</button>
+<scroll-view scroll-y='true' style='height: 100%' lower-threshould='200' bindscrolltolower='lower'>
+  <template is="list" data="{{list}}"/>
+  <view class='loading' wx:if='{{loading}}'>
+    <image mode='widthFix' src='../../../assets/loading/loading.gif'></image>
+  </view>
+</scroll-view>

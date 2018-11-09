@@ -1,1 +1,8 @@
-{}
+{
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTextStyle": "#ffffff",
+  "navigationBarTitleText": "用户",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+}

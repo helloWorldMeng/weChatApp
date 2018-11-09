@@ -1,0 +1,3 @@
+<template name="header2">
+  <view>header2</view>
+</template>

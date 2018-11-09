@@ -6,6 +6,11 @@
     "pages/detail/detail"
   ],
   "tabBar": {
+    "color": "#333333",
+    "selectedColor": "red",
+    "backgroundColor": "#eeeeee",
+    "borderStyle": "black",
+    "position": "bottom",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -33,6 +38,21 @@
     "navigationBarTitleText": "电影",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
-    "enablePullDownRefresh": false
-  }
+    "enablePullDownRefresh": false,
+    "navigationStyle": "custom"
+  },
+  "networkTimeout": {
+    "request": 6000,
+    "connectSocket": 6000,
+    "uploadFile": 6000,
+    "downloadFile": 6000
+  },
+  "debug": false,
+  "functionalPages": false,
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "plugins": [],
+  "resizable": false,
+  "navigateToMiniProgramAppIdList": []
 }

@@ -1,15 +1,14 @@
 // pages/index/index.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     list:[],
     start: 10,
-    loading: false
+    loading: false,
+    headerTit: "你好"
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -40,7 +39,6 @@ Page({
     })
   },
   lower() {
-    console.log(111);
     if (!this.data.loading) {
       this.loadData();
     }
@@ -61,7 +59,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var app = getApp();
+    app.globalDate++;
+    console.log(app.globalDate);
   },
 
   /**

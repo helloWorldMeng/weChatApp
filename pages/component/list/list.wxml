@@ -1,0 +1,15 @@
+<!--pages/template/list/list.wxml-->
+<view class="wrapper">
+  <view class="bigTit">
+    <slot name="name1"></slot>
+    <view>------------------------------</view>
+  </view>
+  <view>
+    <slot name="name2"></slot>
+  </view>
+
+  <view class='item' wx:for='{{proListDate}}' wx:key='{{index}}' data-id='{{item.id}}' bindtap='tap'>
+    <image class="pic" src='{{item.cover}}'></image>
+    <text class="tit">{{item.title + '/' + item.rate}}</text>
+  </view>
+</view>

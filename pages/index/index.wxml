@@ -1,10 +1,32 @@
 <!--pages/index/index.wxml-->
-<scroll-view scroll-y='true' style='height: 100%' lower-threshould='200' bindscrolltolower='lower'>
-  <view class='item' wx:for='{{list}}' wx:key='{{index}}' data-id='{{item.id}}' bindtap='tap'>
-    <image src='{{item.cover}}'></image>
-    <text>{{item.title + '/' + item.rate}}</text>
-  </view>
+
+<!-- include将目标文件除<template/><wxs/> 外的整个代码引入，相当于拷贝-->
+<include src="../component/header" />
+
+<!-- import可以在该文件中使用目标文件定义的template -->
+<import src="../component/header2" />
+<template is="header2" data="{{list}}"/>
+
+<!-- 类似于js,ios上运行速度比js快2~20倍，安卓上无差异 -->
+<!-- wxs标签，引入wxs文件： -->
+<wxs src="./index.wxs" module="m1"></wxs>
+<view>{{m1.msg}}</view>
+
+<!-- wxs标签，直接写入wxs语句： -->
+<wxs module="m2">
+  var some_msg = "hello world2";
+  module.exports = {
+    msg: some_msg,
+  }
+</wxs>
+<view>{{m2.msg}}</view>
+
+<scroll-view class="scrollView" scroll-y='true' style='height: 100%' lower-threshould='200' bindscrolltolower='lower'>
+  <component-list pro-list-date="{{list}}">
+    <view slot="name1">电影列表111</view>
+    <view slot="name2">电影列表222</view>
+  </component-list>
   <view class='loading' wx:if='{{loading}}'>
-    <image mode='widthFix' src='../../../assets/loading/loading.gif'></image>
+    <image mode='widthFix' src='../../assets/loading/loading.gif'></image>
   </view>
 </scroll-view>
