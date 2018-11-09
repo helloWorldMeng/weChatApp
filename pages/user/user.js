@@ -5,13 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    userInfo: {},
+    userName: null,
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.getStorage({
+      key: 'history',
+      success: (res) => {
+        this.setData({
+          list: res.data
+        })
+      },
+    })
     // wx.getUserInfo({
     //   success: (res) => {
     //     console.log(res);
@@ -25,6 +35,23 @@ Page({
     console.log(e);
     this.setData({
       userInfo: e.detail.userInfo
+    })
+  },
+  set(){
+    wx.setStorage({
+      key: 'user',
+      data: 'meng',
+    })
+  },
+  get(){
+    wx.getStorage({
+      key: 'user',
+      success: (res) => {
+        console.log(res);
+        this.setData({
+          userName: res.data
+        })
+      }
     })
   },
   /**

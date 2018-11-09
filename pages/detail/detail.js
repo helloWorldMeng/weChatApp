@@ -21,7 +21,6 @@ Page({
     wx.request({
       url: `https://www.koocv.com/h5-view/v/movie/detail/?id=${id}`,
       success: (res) => {
-        console.log(res);
         wx.setNavigationBarTitle({
           title: res.data.title,
         })

@@ -1,5 +1,4 @@
 /* pages/index/index.wxss */
-
 .scrollView{ /* color font 会继承给子组件 */
   color: blue;
   font-size: 30rpx; 
