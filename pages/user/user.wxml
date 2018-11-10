@@ -1,10 +1,14 @@
 <!--pages/user/user.wxml-->
-<import src="../template/list/list" />
-<image src='{{userInfo.avatarUrl}}'></image>
-<text wx:if='{{userName}}'>{{userName}}</text>
-<button open-type='getUserInfo' bindgetuserinfo='getUser'>获取用户信息</button>
-<button bindtap='set'>设置</button>
-<button bindtap='get'>获取</button>
+<view wx:if="{{userInfo}}">111111111
+  <image src='{{userInfo.avatarUrl}}'></image>
+  <text wx:if='{{userInfo.nickName}}'>{{userInfo.nickName}}</text>
+</view>
+<button wx:if="{{!userInfo}}" open-type='getUserInfo' bindgetuserinfo='getUser'>获取用户信息</button>
+<button wx:if="{{userInfo}}" bindtap='signOut'>退出</button>
+<button bindtap='clearUser'>清除用户信息removeStorage</button>
+<button bindtap='clearAll'>清除用户信息及足迹clearStorage</button>
 
-<import src='/common/template/list.wxml'/>
-<template is='list-template' data='{{list, loading}}'></template>
+<component-list pro-list-date="{{list}}" my-behavior-property="121212">
+    <view slot="name1">列表111</view>
+    <view slot="name2">列表222</view>
+</component-list>

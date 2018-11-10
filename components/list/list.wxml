@@ -1,4 +1,4 @@
-<!--pages/template/list/list.wxml-->
+<!--components/list/list.wxml-->
 <view class="wrapper">
   <view class="bigTit">
     <slot name="name1"></slot>
@@ -8,7 +8,7 @@
     <slot name="name2"></slot>
   </view>
 
-  <view class='item' wx:for='{{proListDate}}' wx:key='{{index}}' data-id='{{item.id}}' bindtap='tap'>
+  <view class='item' wx:for='{{proListDate}}' wx:for-item="item" wx:key='{{index}}' data-item="{{item}}" bindtap='tap'>
     <image class="pic" src='{{item.cover}}'></image>
     <text class="tit">{{item.title + '/' + item.rate}}</text>
   </view>

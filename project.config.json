@@ -11,7 +11,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "1.9.90",
 	"appid": "wx1fdf57c6c2a7727a",
 	"projectname": "weChatApp1",
 	"debugOptions": {

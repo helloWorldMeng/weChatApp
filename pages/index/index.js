@@ -1,4 +1,5 @@
 // pages/index/index.js
+const app = getApp();
 Page({
   /**
    * 页面的初始数据
@@ -43,21 +44,8 @@ Page({
       this.loadData();
     }
   },
-  tap(e){
-    wx.getStorage({
-      key: 'history',
-      success: function(res) {
-        let dataList = res.data;
-        dataList.push(e.currentTarget.dataset.detail);
-        wx.setStorage({
-          key: 'history',
-          data: dataList,
-        })
-      },
-    })
-    wx.navigateTo({
-      url: '/pages/detail/detail?id=' + e.currentTarget.dataset.id,
-    })
+  formSubmit: function (e) {
+    //console.info('表单提交携带数据', e.detail.value)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -72,7 +60,7 @@ Page({
   onShow: function () {
     var app = getApp();
     app.globalDate++;
-    console.log(app.globalDate);
+    //console.log(app.globalDate);
   },
 
   /**

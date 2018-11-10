@@ -1,0 +1,7 @@
+<!--components/selectableGroup1/selectableGroup.wxml-->
+<view wx:for="{{proLabels}}" wx:key="{{index}}">
+  <label>
+    <selectable disabled="{{false}}"></selectable>
+    {{index}}{{item}}
+  </label>
+</view>

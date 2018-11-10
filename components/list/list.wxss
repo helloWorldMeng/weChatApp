@@ -1,4 +1,4 @@
-/* pages/template/list/list.wxss */
+/* components/list/list.wxss */
 
 
  /* color font 父组件会继承给子组件 */

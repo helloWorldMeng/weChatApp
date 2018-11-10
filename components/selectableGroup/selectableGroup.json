@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "custom-radio": "../radio/radio",
+    "custom-checkbox": "../checkbox/checkbox"
+  },
+  "componentGenerics": {
+    "selectable": {
+      "default": "../radio/radio"
+    }
+  }
+}

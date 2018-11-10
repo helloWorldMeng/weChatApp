@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/subject/subject",
     "pages/index/index",
     "pages/user/user",
-    "pages/subject/subject",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "components/selectableGroup/selectableGroup"
   ],
   "tabBar": {
     "color": "#333333",
@@ -39,7 +40,7 @@
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false,
-    "navigationStyle": "custom"
+    "navigationStyle": "default"
   },
   "networkTimeout": {
     "request": 6000,
@@ -52,7 +53,7 @@
   "requiredBackgroundModes": [
     "audio"
   ],
-  "plugins": [],
+  "plugins": {},
   "resizable": false,
   "navigateToMiniProgramAppIdList": []
 }

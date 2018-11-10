@@ -1,84 +1,85 @@
 // pages/detail/detail.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    detail: {}
-  },
+    /**
+     * 页面的初始数据
+     */
+    data: {
+      detail: {}
+    },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    this.loadDetail(options.id);
-  },
-  loadDetail(id){
-    wx.showLoading({
-      title: '加载详情...',
-    })
-    wx.request({
-      url: `https://www.koocv.com/h5-view/v/movie/detail/?id=${id}`,
-      success: (res) => {
-        wx.setNavigationBarTitle({
-          title: res.data.title,
-        })
-        this.setData({
-          detail: res.data
-        })
-        wx.hideLoading();
-      }
-    })
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function (options) {
+      this.loadDetail(options.id);
+      this.loadDetail(this.data.id);
+    },
+    loadDetail(id) {
+      wx.showLoading({
+        title: '加载详情...',
+      })
+      wx.request({
+        url: `https://www.koocv.com/h5-view/v/movie/detail/?id=${id}`,
+        success: (res) => {
+          wx.setNavigationBarTitle({
+            title: res.data.title || '',
+          })
+          this.setData({
+            detail: res.data
+          })
+          wx.hideLoading();
+        }
+      })
+    },
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+    onReady: function () {
 
-  },
+    },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    var app = getApp();
-    app.globalDate++;
-    console.log(app.globalDate);
-  },
+    /**
+     * 生命周期函数--监听页面显示
+     */
+    onShow: function () {
+      var app = getApp();
+      app.globalDate++;
+      //console.log(app.globalDate);
+    },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+    /**
+     * 生命周期函数--监听页面隐藏
+     */
+    onHide: function () {
 
-  },
+    },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+    /**
+     * 生命周期函数--监听页面卸载
+     */
+    onUnload: function () {
 
-  },
+    },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+    /**
+     * 页面相关事件处理函数--监听用户下拉动作
+     */
+    onPullDownRefresh: function () {
 
-  },
+    },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
+    /**
+     * 页面上拉触底事件的处理函数
+     */
+    onReachBottom: function () {
 
-  },
+    },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+    /**
+     * 用户点击右上角分享
+     */
+    onShareAppMessage: function () {
 
-  }
-})
+    }
+  })

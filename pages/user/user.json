@@ -4,5 +4,8 @@
   "navigationBarTitleText": "用户",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "usingComponents":{
+    "component-list": "../../components/list/list"
+  }
 }
