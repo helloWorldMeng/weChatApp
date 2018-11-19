@@ -1,0 +1,42 @@
+<view class="buttonPage">
+  <view>view：</view>
+  <view hover-class="none">none</view>
+  <view hover-class="selected">
+    父
+    <view hover-class="selected" hover-stop-propagation="true">子是否阻止本节点的祖先节点出现点击态</view>
+  </view>
+
+  <view hover-class="selected" hover-start-time="3000">按住后多久出现点击态</view>
+
+  <view hover-class="selected" hover-stay-time="5000">手指松开后点击态保留时间</view>
+
+
+  <view>
+    <button size="mini">size mini</button>
+    <button size="mini" type="primary">primary</button>
+    <button size="mini" type="default">default</button>
+    <button size="mini" type="warn">warn</button>
+  </view>
+
+  <view>
+    <button size="mini" plain="true" type="primary">plain 镂空</button>
+    <button disabled="true" size="mini" type="warn">disabled</button>
+    <button size="mini" loading="true">loading</button>
+  </view>
+
+  <view>
+    <button size="mini" form-type="submit">submit</button>
+    <button size="mini" form-type="reset">reset</button>
+  </view>
+
+  <view>
+    <p>open-type:</p>
+    <button size="mini" open-type="contact">contact</button>
+    <button size="mini" open-type="share">share</button>
+    <button size="mini" open-type="getUserInfo">getUserInfo</button>
+    <button size="mini" open-type="getPhoneNumber">getPhoneNumber</button>
+    <button size="mini" open-type="launchApp">launchApp</button>
+    <button size="mini" open-type="openSetting">openSetting</button>
+    <button size="mini" open-type="feedback">feedback</button>
+  </view>
+</view>

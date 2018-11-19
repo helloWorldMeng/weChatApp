@@ -1,0 +1,4 @@
+/* pages/picker/picker.wxss */
+.page{
+  font-size: 30rpx;
+}

@@ -1,12 +1,13 @@
-// pages/subject/subject.js
+// pages/icon/icon.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    labels: ["苹果", "香蕉", "香梨"],
-    canIUse: wx.canIUse('cover-view')
+    iconSize: [20, 30, 40, 50, 60, 70],
+    iconType: ['success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear'],
+    iconColor: ['red', 'orange', 'yellow', 'green', 'rgb(0,255,255)', 'blue', 'purple']
   },
 
   /**

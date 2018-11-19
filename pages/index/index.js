@@ -15,13 +15,22 @@ Page({
    */
   onLoad: function (options) {
     this.loadData();
+    //wx.hideTabBar();
+    wx.setTabBarBadge({
+      index: 2,
+      text: '1'
+    })
+
+    wx.showTabBarRedDot({
+      index: 0
+    })
   },
   loadData(){
     let { start, list } = this.data;
-    wx.showLoading({
-      title: '正在拼命加载...',
-      mask: true
-    })
+    // wx.showLoading({
+    //   title: '正在拼命加载...',
+    //   mask: true
+    // })
     this.setData({
       loading: true
     })

@@ -1,0 +1,34 @@
+<!--pages/Clipboard/Clipboard.wxml-->
+<text>pages/Clipboard/Clipboard.wxml</text>
+<textarea bindblur="bindTextAreaBlur" placeholder="请输入"></textarea>
+<button bindtap="copy">复制</button>
+
+<button bindtap="call" data-tel="13643812901">13643812901</button>
+
+<button bindtap="scan">扫一扫</button>
+
+<button bindtap="getScreenBrightness">获取屏幕亮度</button>
+<button bindtap="setKeepScreenOn">保持常亮状态</button>
+<button bindtap="setScreenBrightness">设置屏幕亮度</button>
+
+
+<button bindtap="vibrateLong">长时间的振动</button>
+
+<button bindtap="vibrateShort">短时间的振动</button>
+
+<button bindtap="setBackgroundColor1">动态设置窗口的背景色1</button>
+
+<button bindtap="setBackgroundColor2">动态设置窗口的背景色2</button>
+
+<button bindtap="loading">加载</button>
+
+<button bindtap="showActionSheet">​显示操作菜单</button>
+
+<button bindtap="startPullDownRefresh">开始下拉刷新</button>
+
+<button bindtap="pageScrollTo">pageScrollTo</button>
+
+<button bindtap="toTop">置顶</button>
+
+<button open-type='share'>分享</button>
+

@@ -7,6 +7,20 @@ Page({
     data: {
       detail: {}
     },
+    onShareAppMessage: function (res) {
+      console.log("====================");
+      console.log("1" +this.data);
+      if (res.from === 'button') {
+        // 来自页面内转发按钮
+        console.log(res.target)
+      }
+      return {
+        title: this.data.title,
+        // imageUrl: 'https://cdn2.jianshu.io/assets/web/nav-logo-4c7bbafe27adc892f3046e6978459bac.png',
+        imageUrl: this.data.cover,
+        path: 'pages/map/map'
+      }
+    },
 
     /**
      * 生命周期函数--监听页面加载

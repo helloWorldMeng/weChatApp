@@ -10,3 +10,6 @@
 <view hidden="{{hidden}}">
   Coordinates: ({{x}}, {{y}})
 </view>
+<video controls="{{!canIUse}}">
+  <cover-view wx:if="{{canIUse}}">play</cover-view>
+</video>

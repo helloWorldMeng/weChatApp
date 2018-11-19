@@ -12,6 +12,8 @@
 <wxs src="./index.wxs" module="m1"></wxs>
 <view>{{m1.msg}}</view>
 
+<navigator url="/pages/map/map" hover-class="navigator-hover">跳转到新页面</navigator>
+
 <!-- wxs标签，直接写入wxs语句： -->
 <wxs module="m2">
   var some_msg = "hello world2";

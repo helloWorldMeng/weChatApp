@@ -1,7 +1,18 @@
 {
   "pages": [
-    "pages/subject/subject",
     "pages/index/index",
+    "pages/Clipboard/Clipboard",
+    "pages/pickerView/pickerView",
+    "pages/picker/picker",
+    "pages/input/input",
+    "pages/form/form",
+    "pages/richText/richText",
+    "pages/icon/icon",
+    "pages/map/map",
+    "pages/livePlayer/livePlayer",
+    "pages/weui/weui",
+    "pages/button/button",
+    "pages/subject/subject",
     "pages/user/user",
     "pages/detail/detail",
     "components/selectableGroup/selectableGroup"

@@ -1,0 +1,7 @@
+/* pages/button/button.wxss */
+.buttonPage{
+  font-size: 30rpx;
+}
+.selected{
+  color: red;
+}
