@@ -1,0 +1,22 @@
+/* pages/index/index.wxss */
+.scrollView{ /* color font 会继承给子组件 */
+  color: blue;
+  font-size: 30rpx; 
+}
+page{
+  height: 100%;
+}
+.loading{
+  width: 10rpx;
+}
+#searchBar{
+  position: fixed;
+  width: 750rpx;
+  z-index: 2;
+  background: rgba(255,255,255,0.5);
+  color: #333;
+}
+
+#searchBar.writeBg{
+  background: rgba(255,255,255,1);
+}

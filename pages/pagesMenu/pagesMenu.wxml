@@ -1,0 +1,20 @@
+<view>
+  <navigator open-type="switchTab" url="/pages/index/index"  hover-class="navigator-hover">index</navigator>
+  <navigator open-type="switchTab" url="/pages/subject/subject"  hover-class="navigator-hover">subject</navigator>
+  <navigator open-type="switchTab" url="/pages/user/user"  hover-class="navigator-hover">user</navigator>
+  <navigator url="/pages/Clipboard/Clipboard"  hover-class="navigator-hover">Clipboard</navigator>
+  <navigator url="/pages/pickerView/pickerView"  hover-class="navigator-hover">pickerView</navigator>
+  <navigator url="/pages/picker/picker"  hover-class="navigator-hover">picker</navigator>
+  <navigator url="/pages/input/input"  hover-class="navigator-hover">input</navigator>
+  <navigator url="/pages/form/form"  hover-class="navigator-hover">form</navigator>
+  <navigator url="/pages/richText/richText"  hover-class="navigator-hover">richText</navigator>
+  <navigator url="/pages/icon/icon"  hover-class="navigator-hover">icon</navigator>
+  <navigator url="/pages/map/map"  hover-class="navigator-hover">map</navigator>
+  <navigator url="/pages/livePlayer/livePlayer"  hover-class="navigator-hover">livePlayer</navigator>
+  <navigator url="/pages/weui/weui"  hover-class="navigator-hover">weui</navigator>
+  <navigator url="/pages/button/button"  hover-class="navigator-hover">button</navigator>
+  <navigator url="/pages/detail/detail"  hover-class="navigator-hover">detail</navigator>
+  <navigator url="/pages/selectableGroup/selectableGroup"  hover-class="navigator-hover">selectableGroup</navigator>
+  <navigator url="/pages/scrollView/scrollView" hover-class="navigator-hover">scrollView</navigator>
+  <navigator url="/pages/home/home" hover-class="navigator-hover">home</navigator>
+</view>

@@ -1,0 +1,19 @@
+<!-- 横向滑动列表 -->
+<text style='font-size:15px;padding:10px;'>横向滑动列表>></text>
+<view id="pink"></view>
+<view id="grey"></view>
+<scroll-view style="height: 400px;" scroll-y bindscrolltoupper="upper1" bindscrolltolower="lower1">
+  <view id="red">scroll-view  y</view>
+  <view id="blue">scroll-view y</view>
+  <scroll-view scroll-x class="scroll-x" bindscrolltoupper="upper2" bindscrolltolower="lower2">
+    <view wx:for="{{list}}" wx:key="{{index}}" class="view-parent">
+      <view class="view-item">{{item.txt}}</view>
+    </view>
+  </scroll-view>
+  <view id="red">scroll-view  y</view>
+  <view id="blue">scroll-view  y</view>
+  <view id="red">scroll-view  y</view>
+  <view id="blue">scroll-view  y</view>
+</scroll-view>
+<view id="pink"></view>
+<view id="grey"></view>

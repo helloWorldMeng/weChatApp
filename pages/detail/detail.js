@@ -26,6 +26,11 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+      let app = getApp();
+      this.setData({
+        globalUrl: app.globalUrl
+      })
+      console.log(this.data.globalUrl);
       this.loadDetail(options.id);
       this.loadDetail(this.data.id);
     },
@@ -33,24 +38,26 @@ Page({
       wx.showLoading({
         title: '加载详情...',
       })
+      let _this = this;
+      let url = _this.data.globalUrl + `/h5-view/v/movie/detail/?id=${id}`
+      this.http(url, function (res) {
+        console.log(res);
+        wx.setNavigationBarTitle({
+          title: res.data.title || '',
+        })
+        _this.setData({
+          detail: res.data
+        })
+        wx.hideLoading();
+      });
+    },
+    http: function (url,callback) {
       wx.request({
-        url: `https://www.koocv.com/h5-view/v/movie/detail/?id=${id}`,
+        url: url,
         success: (res) => {
-          wx.setNavigationBarTitle({
-            title: res.data.title || '',
-          })
-          this.setData({
-            detail: res.data
-          })
-          wx.hideLoading();
+          callback(res);
         }
       })
-    },
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
     },
 
     /**

@@ -1,0 +1,10 @@
+<div class="weui-search-bar {{searchBarClass}}" id="searchBar">
+123
+</div>
+<scroll-view class="scrollView" scroll-y='true' style='height: 100%' lower-threshould='200' bindscrolltolower='lower' enable-back-to-top="true" bindscroll="scroll">
+  <component-list pro-list-date="{{list}}" my-behavior-property="121212">
+  </component-list>
+  <view class='loading' wx:if='{{loading}}'>
+    <image mode='widthFix' src='../../assets/loading/loading.gif'></image>
+  </view>
+</scroll-view>

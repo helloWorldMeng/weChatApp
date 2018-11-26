@@ -39,7 +39,7 @@ Component({
       })
 
       wx.navigateTo({
-        url: '/pages/detail/detail?id=' + e.currentTarget.dataset.item.id,
+        url: '/pages/detail/detail?id=' + e.currentTarget.dataset.item.id + '&name=mengyang',
       })
     }
   },

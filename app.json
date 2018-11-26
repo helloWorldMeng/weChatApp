@@ -1,6 +1,13 @@
 {
   "pages": [
+    "pages/pagesMenu/pagesMenu",
+    "pages/scrollView/scrollView",
+    "echarts/pages/line/index",
+    "echarts/pages/index/index",
     "pages/index/index",
+    "pages/home/home",
+    "pages/list/list",
+    "pages/animation/animation",
     "pages/Clipboard/Clipboard",
     "pages/pickerView/pickerView",
     "pages/picker/picker",
@@ -15,7 +22,29 @@
     "pages/subject/subject",
     "pages/user/user",
     "pages/detail/detail",
-    "components/selectableGroup/selectableGroup"
+    "components/selectableGroup/selectableGroup",
+    "echarts/pages/bar/index",
+    "echarts/pages/measureText/index",
+    "echarts/pages/scatter/index",
+    "echarts/pages/sunburst/index",
+    "echarts/pages/funnel/index",
+    "echarts/pages/radar/index",
+    "echarts/pages/gauge/index",
+    "echarts/pages/pie/index",
+    "echarts/pages/k/index",
+    "echarts/pages/heatmap/index",
+    "echarts/pages/tree/index",
+    "echarts/pages/treemap/index",
+    "echarts/pages/map/index",
+    "echarts/pages/graph/index",
+    "echarts/pages/boxplot/index",
+    "echarts/pages/parallel/index",
+    "echarts/pages/sankey/index",
+    "echarts/pages/themeRiver/index",
+    "echarts/pages/lazyLoad/index",
+    "echarts/pages/multiCharts/index",
+    "echarts/pages/move/index",
+    "echarts/pages/saveCanvas/index"
   ],
   "tabBar": {
     "color": "#333333",
@@ -24,6 +53,12 @@
     "borderStyle": "black",
     "position": "bottom",
     "list": [
+      {
+        "pagePath": "pages/pagesMenu/pagesMenu",
+        "text": "菜单",
+        "iconPath": "/assets/image/home0.png",
+        "selectedIconPath": "/assets/image/home1.png"
+      },
       {
         "pagePath": "pages/index/index",
         "text": "首页",
@@ -51,7 +86,8 @@
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false,
-    "navigationStyle": "default"
+    "navigationStyle": "default",
+    "pageOrientation": "auto"
   },
   "networkTimeout": {
     "request": 6000,
